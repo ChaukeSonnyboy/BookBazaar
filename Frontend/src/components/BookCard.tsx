@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
 				rounded-t-lg"
 		>
 			<div>
-				 <Link to={`/book/${book._id}`}>
+				<Link to={`/books/${book._id}`}>
 					<img
 						src={`${getImgUrl(book?.coverImage)}`}
 						alt=""
@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
 			</div>
 
 			<div className="">
-				<Link to={`/book/${book._id}`} >
+				<Link to={`/books/${book._id}`}>
 					<h3 className="text-xl font-semibold hover:text-blue-600 mb-3">
 						{book?.title}
 					</h3>

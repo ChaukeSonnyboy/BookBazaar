@@ -54,7 +54,9 @@ const NewBook: React.FC = () => {
 		inputs: {
 			title: { value: "", isValid: false },
 			description: { value: "", isValid: false },
-			address: { value: "", isValid: false },
+			author: { value: "", isValid: false },
+			year: { value: "", isValid: false },
+			price: { value: "", isValid: false },
 		},
 		isValid: false,
 	});
@@ -85,30 +87,56 @@ const NewBook: React.FC = () => {
 				id="title"
 				element="input"
 				type="text"
-				label="Title"
+				label="Book Title"
 				validators={[VALIDATOR_REQUIRE()]}
-				errorText="Please enter a valid title."
+				errorText="Please enter a valid book title."
 				onInput={inputHandler}
+				placeholder="Please Enter a Book Title"
 			/>
 			<Input
 				id="description"
 				element="textarea"
 				label="Description"
+				placeholder="Please enter book description"
 				validators={[VALIDATOR_MINLENGTH(5)]}
 				errorText="Please enter a valid description (at least 5 characters)."
 				onInput={inputHandler}
 			/>
 			<Input
-				id="address"
+				id="author"
 				element="input"
-				label="Address"
+				type="text"
+				label="Book Author"
+				placeholder="Please enter book author name"
 				validators={[VALIDATOR_REQUIRE()]}
-				errorText="Please enter a valid address."
+				errorText="Please enter a valid book author."
 				onInput={inputHandler}
 			/>
-			<button type="submit" disabled={!formState.isValid}>
-				ADD PLACE
-			</button>
+			<Input
+				id="year"
+				element="input"
+				type="text"
+				label="Publication Year"
+				placeholder="Please enter book publication year"
+				validators={[VALIDATOR_REQUIRE()]}
+				errorText="Please enter a valid publication year."
+				onInput={inputHandler}
+			/>
+			<Input
+				id="price"
+				element="input"
+				label="Book Price"
+				placeholder="Please enter book price"
+				validators={[VALIDATOR_REQUIRE()]}
+				errorText="Please enter a valid price."
+				onInput={inputHandler}
+			/>
+
+			{formState.isValid && (
+				<button className="btn-primary" type="submit">
+					ADD BOOK
+				</button>
+			)}
 		</form>
 	);
 };

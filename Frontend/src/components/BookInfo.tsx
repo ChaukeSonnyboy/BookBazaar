@@ -1,5 +1,5 @@
 // import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getImgUrl } from "../functions/getImgUrl";
 
 import books from "../books.json";
@@ -77,7 +77,7 @@ const BookInfo = () => {
 
 				{/* <FaExternalLinkAlt className="w-4 h-4 " /> */}
 				<div>
-					<button>Edit</button>
+					<Link to={`/books/${viewedBook?._id}/edit`}>Edit</Link>
 					<button>Delete</button>
 				</div>
 			</div>

@@ -26,7 +26,9 @@ const Hero = () => {
 					<Link to="/books" className="btn-primary">
 						BUY A BOOK
 					</Link>
-					<button className="btn-secondary">SELL MY BOOK</button>
+					<Link to="/books/new" className="btn-secondary">
+						SELL MY BOOK
+					</Link>
 				</div>
 			</div>
 		</div>

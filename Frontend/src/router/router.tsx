@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import Books from "../pages/home/Books";
 import BookInfo from "../components/BookInfo";
 import NewBook from "../components/NewBook";
+import UpdateBook from "../components/UpdateBook";
 
 const router = createBrowserRouter([
 	{
@@ -19,12 +20,16 @@ const router = createBrowserRouter([
 				element: <Books />,
 			},
 			{
-				path: "/listbook",
+				path: "/books/:id",
+				element: <BookInfo />, // Ensure this route shows book details
+			},
+			{
+				path: "/books/new",
 				element: <NewBook />,
 			},
 			{
-				path: "book/:id",
-				element: <BookInfo />,
+				path: "/books/:id/edit", // Use a consistent pattern for edit
+				element: <UpdateBook />,
 			},
 		],
 	},
