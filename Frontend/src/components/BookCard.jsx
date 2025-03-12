@@ -1,4 +1,4 @@
-import { getImgUrl } from "../../src/functions/getImgUrl";
+import { getImgUrl } from "../functions/getImgUrl";
 
 import { Link } from "react-router-dom";
 

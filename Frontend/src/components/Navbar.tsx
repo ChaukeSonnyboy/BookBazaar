@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { HiOutlineHeart } from "react-icons/hi2";
 import { GiBookshelf } from "react-icons/gi";
 
 import { IoSearchOutline } from "react-icons/io5";
@@ -7,8 +6,6 @@ import { HiOutlineUser } from "react-icons/hi";
 
 // import avatarImg from "../assets/avatar.png"
 import { useState } from "react";
-// import { useSelector } from "react-redux";
-// import { useAuth } from "../context/AuthContext";
 
 const navigation = [
 	{ name: "Home", href: "/" },
@@ -20,15 +17,6 @@ const navigation = [
 
 const Navbar = () => {
 	const [isMenuOpen, setIsOpenMenu] = useState(false);
-	// const cartItems = useSelector(state => state.cart.cartItems);
-
-	// const {currentUser, logout} = useAuth()
-
-	// const handleLogOut = () => {
-	//     logout()
-	// }
-
-	///To be deleted
 
 	const [currentUser, setCurrentUser] = useState(true);
 
@@ -37,15 +25,14 @@ const Navbar = () => {
 	return (
 		<header className=" max-w-screen-2xl mx-auto px-4 py-6">
 			<nav className=" flex justify-between items-center">
-				{/* left div */}
 				<div className=" flex items-center md:gap-16 gap-4">
 					<Link to="/">
 						<GiBookshelf className="size-10" />
-						{/* <span className="hidden md:block">BookZaar</span> */}
+						<span className="hidden md:block">PassItOnBooks</span>
 					</Link>
 
 					{/* search input */}
-					<div className="relative sm:w-72 w-40 space-x-2">
+					{/* <div className="relative sm:w-72 w-40 space-x-2">
 						<IoSearchOutline className="absolute inline-block left-3 inset-y-2" />
 
 						<input
@@ -53,7 +40,7 @@ const Navbar = () => {
 							placeholder="Search a book"
 							className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none"
 						/>
-					</div>
+					</div> */}
 				</div>
 
 				{/* rigth div */}
@@ -112,23 +99,7 @@ const Navbar = () => {
 						)}
 					</div>
 
-					<button className="hidden sm:block">
-						<HiOutlineHeart className="size-6" />
-					</button>
-
-					{/* <Link
-						to="/cart"
-						className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm"
-					>
-						<HiOutlineShoppingCart className="" />
-						{cartItems.length > 0 ? (
-							<span className="text-sm font-semibold sm:ml-1">
-								{cartItems.length}
-							</span>
-						) : (
-							<span className="text-sm font-semibold sm:ml-1">0</span>
-						)}
-					</Link> */}
+		
 				</div>
 			</nav>
 		</header>

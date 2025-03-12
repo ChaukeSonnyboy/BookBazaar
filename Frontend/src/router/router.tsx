@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/home/Home";
-import Books from "../pages/home/Books";
+import Books from "../pages/Books";
 import BookInfo from "../components/BookInfo";
 import NewBook from "../components/NewBook";
 import UpdateBook from "../components/UpdateBook";

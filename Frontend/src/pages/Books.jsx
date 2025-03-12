@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import BookCard from "../../components/BookCard";
+import BookCard from "../components/BookCard";
 
-import books from "../../books.json";
+import books from "../books.json";
 
 const categories = [
 	"Choose a genre",

@@ -12,22 +12,3 @@ export default {
 	plugins: [],
 };
 
-
-
-// SLICE
-
-
-// 			{/* <p className="text-gray-600 mb-5">
-// 						{book?.description.length > 80
-// 							? `${book.description.slice(0, 80)}...`
-// 							: book?.description}
-// 					</p> */}
-
-
-
-
-// //////////////TOBE USED//////////////
-
-// 					{/* <span className="line-through font-normal ml-2">
-// 						R {book?.oldPrice}
-// 					</span> */} //BOOKSHOP PRICE TO BE ADDED
